@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <section>
-       <div className="flex justify-between mt-4">
+       <div className="flex justify-between mt-4 mr-6 ml-6 ">
         <div>
             <p className="text-sky-500 uppercase font-semibold text-2xl">hopeson</p>
         </div>
@@ -24,7 +24,7 @@ export default function Header() {
             </ul>
         </div>
         {/* small */}
-        <div>
+        <div className="hidden">
             
         </div>
        </div>
