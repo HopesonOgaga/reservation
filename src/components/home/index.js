@@ -1,5 +1,16 @@
 import React from "react";
+import Service from "./servicesection/services";
 
 export default function Home() {
-  return <div className="">hello death code</div>;
+  return <section className="mr-4 ml-4 ">
+    <div className="flex flex-col gap-4 items-center justify-center w-full h-full">
+      <p className="text-4xl">welcome to the <span className="text-sky-500 uppercase font-semibold ">hopeson</span> </p>
+      <div className="border border-b-2 bg-black w-24 rounded-full shadow-sm"></div>
+    </div>
+    <Service></Service>
+    {/* slider willl be here */}
+    <div>
+
+    </div>
+  </section>;
 }
