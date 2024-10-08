@@ -8,8 +8,8 @@ export default function Header() {
   };
 
   return (
-    <section>
-      <div className="flex justify-between mt-4 mr-6 ml-6">
+    <section className="mb-6 " >
+      <div className="flex justify-between mt-4 mr-6 ml-6 z-50 ">
         <div>
           <p className="text-sky-500 uppercase font-semibold text-2xl">hopeson</p>
         </div>
@@ -45,7 +45,7 @@ export default function Header() {
 
       {/* Small screen menu */}
       {!menu && (
-        <div className="mt-4 md:hidden">
+        <div className="mt-4 md:hidden z-10 ">
           <ul className="flex flex-col w-full h-full items-center text-left gap-6">
             {["explore", "reservation", "night life", "dining", "reviews"].map((item) => (
               <React.Fragment key={item}>
