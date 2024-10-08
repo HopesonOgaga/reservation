@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className="mr-4 ml-4 ">
       <Header />
-      <div className="flex flex-col gap-4 items-center justify-center w-full h-full mb-12 mt-12 ">
+      <div className="flex flex-col gap-4 items-center justify-center w-full h-full mb-12 mt-10 ">
         <p className="text-4xl">
           welcome to the{" "}
           <span className="text-sky-500 uppercase font-semibold ">hopeson</span>{" "}
