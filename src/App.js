@@ -10,6 +10,7 @@ import Header from "./components/header";
 import Service from "./components/home/servicesection/services";
 import DateInfo from "./components/home/datedata";
 import OurHotels from "./components/home/hotels";
+import Footer from "./components/footer";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="service" element={<Service></Service>}></Route>
       <Route path="date" element ={<DateInfo/>}></Route>
       <Route path="hotel" element={<OurHotels/>}></Route>
+      <Route path="footer" element = {<Footer></Footer>}></Route>
     </Route>
   )
 );
