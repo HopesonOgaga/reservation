@@ -2,24 +2,28 @@ import React from "react";
 
 const hotels = [
   {
-    name: "hopeson hotel",
-    description: "At hopeson Gardens, the rooms are well appointed and designed to provide comfort and convenience.",
-    imageUrl: "/image/bedroom4.jpg",
+    name: "hopeson gardens",
+    description:
+      "At Eko Gardens, the rooms are well appointed and designed to provide comfort and convenience.",
+    imageUrl: "/image/eko-gardens.jpg",
   },
   {
     name: "hopeson hotel",
-    description: "At hopeson Gardens, the rooms are well appointed and designed to provide comfort and convenience.",
-    imageUrl: "/image/bedroom4.jpg",
+    description:
+      "At hopeson Gardens, the rooms are well appointed and designed to provide comfort and convenience.",
+    imageUrl: "/image/eko-hotel.jpg",
   },
   {
-    name: "hopeson hotel",
-    description: "At hopeson Gardens, the rooms are well appointed and designed to provide comfort and convenience.",
-    imageUrl: "/image/bedroom4.jpg",
+    name: "hopeson suites",
+    description:
+      "Eko Suites is tucked in the most discreet part of the property with 88 large suites. The property offers a peaceful, quiet and relaxing ambience.",
+    imageUrl: "/image/eko-suites.webp",
   },
   {
-    name: "hopeson hotel",
-    description: "At hopeson Gardens, the rooms are well appointed and designed to provide comfort and convenience.",
-    imageUrl: "/image/bedroom4.jpg",
+    name: "hopeson signature",
+    description:
+      "Caring comes easily to those of us who are privileged to cater to you at Eko Signature. The vibrant colours of the furnishing indulges you.",
+    imageUrl: "/image/eko-signature.webp",
   },
 ];
 
@@ -44,9 +48,7 @@ export default function OurHotels() {
               </p>
               <div className="border border-b-2 border-sky-400 w-full mt-4"></div>
               <div>
-                <p className="text-gray-100 text-lg">
-                  {hotel.description}
-                </p>
+                <p className="text-gray-100 text-lg">{hotel.description}</p>
               </div>
             </div>
           </div>
