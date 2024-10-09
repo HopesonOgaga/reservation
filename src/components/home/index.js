@@ -2,6 +2,7 @@ import React from "react";
 import Service from "./servicesection/services";
 import Header from "../header";
 import DateInfo from "./datedata";
+import OurHotels from "./hotels";
 
 export default function Home() {
   return (
@@ -40,7 +41,9 @@ export default function Home() {
       </section>
       <Service></Service>
       {/* slider willl be here */}
-      <div></div>
+      <div className="mt-6 ">
+        <OurHotels/>
+      </div>
     </section>
   );
 }
