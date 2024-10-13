@@ -6,8 +6,8 @@ export default function Service() {
   return (
     <section>
       <div>
-        <div><p className="font-semibold text-2xl capitalize text-center">our services</p></div>
-        <div className="grid grid-cols-3 gap-20">
+        <div><p className="font-semibold text-2xl capitalize text-center  text-blue-400 ">our services</p></div>
+        <div className="grid grid-cols-1 mt-6 md:grid-cols-3 gap-20">
           {service.map((serviceui) => {
             console.log(serviceui);
             return (
