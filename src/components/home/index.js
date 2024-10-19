@@ -4,6 +4,8 @@ import Header from "../header";
 import DateInfo from "./datedata";
 import OurHotels from "./hotels";
 import Footer from "../footer";
+import CheckButton from "./datedata/check";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -20,6 +22,7 @@ export default function Home() {
           <div className="border border-b-2 bg-black w-24 rounded-full shadow-sm"></div>
         </div>
         <DateInfo />
+        <Link to={"available"}><CheckButton></CheckButton></Link>
         {/* about */}
         <section className="flex w-full h-full mt-12 mb-12 ">
           <div className="">
