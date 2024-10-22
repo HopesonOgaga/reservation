@@ -12,17 +12,19 @@ import DateInfo from "./components/home/datedata";
 import OurHotels from "./components/home/hotels";
 import Footer from "./components/footer";
 import Availability from "./components/reservation/availability";
+import Reservation from "./components/reservation/checkout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<Home></Home>}></Route>
-      <Route path="header" element= {<Header></Header>}></Route>
+      <Route path="header" element={<Header></Header>}></Route>
       <Route path="service" element={<Service></Service>}></Route>
-      <Route path="date" element ={<DateInfo/>}></Route>
-      <Route path="hotel" element={<OurHotels/>}></Route>
-      <Route path="footer" element = {<Footer></Footer>}></Route>
+      <Route path="date" element={<DateInfo />}></Route>
+      <Route path="hotel" element={<OurHotels />}></Route>
+      <Route path="footer" element={<Footer></Footer>}></Route>
       <Route path="available" element={<Availability></Availability>}></Route>
+      <Route path="reserve" element={<Reservation></Reservation>}></Route>
     </Route>
   )
 );

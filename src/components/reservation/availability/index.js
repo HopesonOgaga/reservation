@@ -5,28 +5,28 @@ import HotelPrpps from "./props";
 
 const data = [
   {
-    image: "",
+    image: "/image/eko-hotel.jpg",
     name: "Eko Signature",
     location: "Lagos, Nigeria",
     details: "Luxurious hotel with premium services.",
     price: "450,000",
   },
   {
-    image: "",
+    image: "/image/eko-hotel.jpg",
     name: "Eko Gardens",
     location: "Victoria Island, Nigeria",
     details: "A comfortable stay in a serene environment.",
     price: "125,000",
   },
   {
-    image: "",
+    image: "/image/eko-hotel.jpg",
     name: "Eko Hotel",
     location: "Victoria Island, Nigeria",
     details: "Modern amenities with excellent hospitality.",
     price: "255,000",
   },
   {
-    image: "",
+    image: "/image/eko-hotel.jpg",
     name: "Eko Suites",
     location: "Lagos, Nigeria",
     details: "Perfect for business and leisure stays.",
@@ -64,7 +64,7 @@ export default function Availability() {
             <option value="relevance">Sort: By relevance</option>
             <option value="name-asc">Hotel name A-Z</option>
           </select>
-          <div className="grid grid-cols-3 gap-2 ">
+          <div className="grid md:grid-cols-3 gap-2  grid-cols-1">
             {hotel.map((hotelui, index) => (
               <HotelPrpps
                 key={index}

@@ -2,13 +2,13 @@ import React from "react";
 
 export default function HotelPrpps({ image, name, location, price, details }) {
   return (
-    <div className="w-[25vw] h-[50vh] p-4 rounded-sm shadow-md flex flex-col gap-4">
+    <div className="md:w-[25vw] w-full h-[80vh] p-4 rounded-sm shadow-md flex flex-col gap-4">
       {/* Image */}
       {image ? (
         <img
           src={image}
           alt={name}
-          className="w-full h-1/3 object-cover rounded"
+          className="w-full h-1/2 object-cover rounded"
         />
       ) : (
         <div className="w-full h-1/3 bg-gray-200 rounded flex items-center justify-center">
