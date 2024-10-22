@@ -13,6 +13,7 @@ import OurHotels from "./components/home/hotels";
 import Footer from "./components/footer";
 import Availability from "./components/reservation/availability";
 import Reservation from "./components/reservation/checkout";
+import Payment from "./components/reservation/payment";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="footer" element={<Footer></Footer>}></Route>
       <Route path="available" element={<Availability></Availability>}></Route>
       <Route path="reserve" element={<Reservation></Reservation>}></Route>
+      <Route path="payment" element ={<Payment></Payment>}></Route>
     </Route>
   )
 );
