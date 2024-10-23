@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../header";
 import Footer from "../../footer";
+import { Link } from "react-router-dom";
 
 export default function Reservation() {
   return (
@@ -94,9 +95,12 @@ export default function Reservation() {
                   <p className="text-xl font-semibold">NGN 160,000</p>
                   <p className="text-sm ">Including taxes and fees</p>
                 </div>
-                <button className="w-44 h-14 rounded-md shadow-sm border-2 bg-blue-400 hover:bg-blue-600 active:bg-sky-300 font-semibold text-lg capitalize text-white">
-                  Book Now
-                </button>
+                <Link to={"/payment"}>
+                  {" "}
+                  <button className="w-44 h-14 rounded-md shadow-sm border-2 bg-blue-400 hover:bg-blue-600 active:bg-sky-300 font-semibold text-lg capitalize text-white">
+                    Book Now
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

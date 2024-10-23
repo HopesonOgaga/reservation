@@ -13,7 +13,7 @@ export default function Home() {
       <section className="mr-4 ml-4 ">
         <Header />
         <div className="flex flex-col gap-4 items-center justify-center w-full h-full mb-12 mt-10 ">
-          <p className="text-4xl">
+          <p className="md:text-4xl text-3xl text-center w-full">
             welcome to the{" "}
             <span className="text-sky-500 uppercase font-semibold ">
               hopeson
@@ -22,21 +22,21 @@ export default function Home() {
           <div className="border border-b-2 bg-black w-24 rounded-full shadow-sm"></div>
         </div>
         <DateInfo />
-        <Link to={"available"}><CheckButton></CheckButton></Link>
+        <CheckButton></CheckButton>
         {/* about */}
-        <section className="flex w-full h-full mt-12 mb-12 ">
+        <section className="flex flex-col gap-1 md:flex-row w-full h-full mt-12 mb-12 ">
           <div className="">
             <img
-              className="w-[40vw] h-[70vh]"
+              className="md:w-[40vw] w-full h-1/3 md:h-[70vh]"
               src="/image/lobby.jpg"
               alt=""
             ></img>
           </div>
-          <div className="shadow-md rounded-sm  w-[60vw]  flex flex-col gap-6 p-8 ">
-            <p className="text-blue-400 font-semibold capitalize text-2xl">
+          <div className="shadow-md rounded-sm w-full  md:w-[60vw]  flex flex-col gap-6 p-8 ">
+            <p className="text-blue-400 font-semibold capitalize text-2xl md:text-left text-center">
               About us
             </p>
-            <p className="text-2xl font-bold uppercase ">
+            <p className="text-2xl font-bold uppercase  md:text-left text-center">
               The Most Preferred Hotel in West Africa
             </p>
             <p className="font-light ">

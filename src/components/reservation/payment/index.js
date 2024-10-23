@@ -6,7 +6,7 @@ export default function Payment() {
   return (
     <section>
       <Header />
-      <div className="md:ml-6 md:mr-6 border-2 rounded-md shadow-md border-blue-400 pl-6 pr-6 py-6 w-full h-full md:w-[55vw]">
+      <div className="md:ml-6 md:mr-6 border-2 rounded-md shadow-md border-blue-400 p=l-6 pr-6 py-6 w-full h-full md:w-[55vw]">
         {/* User Information Form */}
         <form>
           <div className="w-full h-full">

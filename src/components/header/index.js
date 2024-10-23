@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [menu, setMenu] = useState(true);
@@ -8,19 +9,30 @@ export default function Header() {
   };
 
   return (
-    <section className="mb-6 " >
+    <section className="mb-6 ">
       <div className="flex justify-between mt-4 mr-6 ml-6 z-50 ">
         <div>
-          <p className="text-sky-500 uppercase font-semibold text-2xl">hopeson</p>
+          <Link to={"/"}>
+            <p className="text-sky-500 uppercase font-semibold text-2xl">
+              hopeson
+            </p>
+          </Link>
         </div>
 
         <div className="">
           <ul className="flex gap-4 hidden sm:flex-row md:flex">
-            {["explore", "reservation", "night life", "dining", "reviews"].map((item) => (
-              <li key={item} className="text-sm capitalize font-normal hover:text-sky-600 active:text-red-400">
-                <a href="www" target="_blank" rel="noopener noreferrer">{item}</a>
-              </li>
-            ))}
+            {["explore", "reservation", "night life", "dining", "reviews"].map(
+              (item) => (
+                <li
+                  key={item}
+                  className="text-sm capitalize font-normal hover:text-sky-600 active:text-red-400"
+                >
+                  <a href="www" target="_blank" rel="noopener noreferrer">
+                    {item}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
 
@@ -38,7 +50,11 @@ export default function Header() {
         {/* Small Menu Toggle */}
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
-            <img className="w-10" src={menu ? "/image/menubar.png" : "/image/delete.png"} alt={menu ? "menu" : "close menu"} />
+            <img
+              className="w-10"
+              src={menu ? "/image/menubar.png" : "/image/delete.png"}
+              alt={menu ? "menu" : "close menu"}
+            />
           </button>
         </div>
       </div>
@@ -47,14 +63,18 @@ export default function Header() {
       {!menu && (
         <div className="mt-4 md:hidden z-10 ">
           <ul className="flex flex-col w-full h-full items-center text-left gap-6">
-            {["explore", "reservation", "night life", "dining", "reviews"].map((item) => (
-              <React.Fragment key={item}>
-                <li className="text-sm capitalize font-normal hover:text-sky-600 active:text-red-400">
-                  <a href="www" target="_blank" rel="noopener noreferrer">{item}</a>
-                </li>
-                <div className="border border-b-2 bg-black w-32 rounded-full shadow-sm"></div>
-              </React.Fragment>
-            ))}
+            {["explore", "reservation", "night life", "dining", "reviews"].map(
+              (item) => (
+                <React.Fragment key={item}>
+                  <li className="text-sm capitalize font-normal hover:text-sky-600 active:text-red-400">
+                    <a href="www" target="_blank" rel="noopener noreferrer">
+                      {item}
+                    </a>
+                  </li>
+                  <div className="border border-b-2 bg-black w-32 rounded-full shadow-sm"></div>
+                </React.Fragment>
+              )
+            )}
           </ul>
         </div>
       )}

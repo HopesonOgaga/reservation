@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Reservation from "../checkout";
 
 export default function HotelPrpps({ image, name, location, price, details }) {
   return (
@@ -29,16 +31,23 @@ export default function HotelPrpps({ image, name, location, price, details }) {
 
       {/* Price */}
       <div>
-        <p className="text-lg font-semibold text-blue-400 text-center w-full"><span className="text-lg font-medium text-black "> from </span>₦{price}</p>
+        <p className="text-lg font-semibold text-blue-400 text-center w-full">
+          <span className="text-lg font-medium text-black "> from </span>₦
+          {price}
+        </p>
         <p className="text-center text-sm font-light ">Per Night</p>
-        <p className="text-center text-sm font-light">Including taxes and fees</p>
+        <p className="text-center text-sm font-light">
+          Including taxes and fees
+        </p>
       </div>
 
       {/* Button */}
       <div className="mt-auto">
-        <button className="capitalize text-xl text-white font-semibold rounded-md shadow-lg w-full h-14 hover:bg-blue-500 active:bg-blue-600 bg-blue-400">
-          View Rates
-        </button>
+        <Link to="/reserve">
+          <button className="capitalize text-xl text-white font-semibold rounded-md shadow-lg w-full h-14 bg-blue-400 hover:bg-blue-500 active:bg-blue-600">
+            View Rates
+          </button>
+        </Link>
       </div>
     </div>
   );
