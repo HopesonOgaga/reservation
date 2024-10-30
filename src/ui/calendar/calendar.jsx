@@ -13,6 +13,10 @@ const MyCalendar = ({ events }) => {
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500 }}
+        views={["month", "week", "day"]}
+        defaultView={"month"}
+        toolbar={false}
+
       />
     </div>
   );
