@@ -14,6 +14,9 @@ import Footer from "./components/footer";
 import Availability from "./components/reservation/availability";
 import Reservation from "./components/reservation/checkout";
 import Payment from "./components/reservation/payment";
+import MyCalendar from "./ui/calendar/calendar";
+import { events } from "./ui/calendar/indes";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +30,7 @@ const router = createBrowserRouter(
       <Route path="available" element={<Availability></Availability>}></Route>
       <Route path="reserve" element={<Reservation></Reservation>}></Route>
       <Route path="payment" element ={<Payment></Payment>}></Route>
+      <Route path="calendar" element={<MyCalendar events={events} />}></Route>
     </Route>
   )
 );
