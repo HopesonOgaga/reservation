@@ -9,22 +9,22 @@
   font-size: 12px;
 }
 
-.rpc-event {
+.rbc-event {
   padding: 0px !important;
   border-radius: 0px !important;
   border: none !important;
   background-color: transparent !important;
 }
 
-.rpc-time-slot {
+.rbc-time-slot {
   background-color: antiquewhite;
   color: aqua;
 }
 
-.rpc-event-label {
+.rbc-event-label {
   display: none !important;
 }
 
-.rpc-event-container {
+.rbc-event-container {
   width: 100% !important;
 }
