@@ -1,6 +1,8 @@
 import React from "react";
-
+import { useContext } from "react";
+import UserContext from "../../context/userContext";
 export default function UserNumber() {
+  const {data} = useContext(UserContext)
   return (
     <section>
       <div className="flex gap-6 border border-blue-400 rounded-sm shadow-sm w-full md:w-1/6  h-12 justify-center items-center  mt-8 mb-8">
@@ -9,10 +11,10 @@ export default function UserNumber() {
         </div>
         <div className="flex gap-4">
           <p className="font-semibold text-lg capitalize text-blue-300 ">
-            1 <span className="font-semibold text-lg capitalize text-gray-500 ">adults</span>
+            <span className="font-semibold text-lg capitalize text-gray-500 ">{data.adult} adults</span>
           </p>
           <p className="font-semibold text-lg capitalize text-blue-300 ">
-            0 <span className="font-semibold text-lg capitalize text-gray-500 ">children</span>
+             <span className="font-semibold text-lg capitalize text-gray-500 ">{data.child} children</span>
           </p>
         </div>
       </div>
