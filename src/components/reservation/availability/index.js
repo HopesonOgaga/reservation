@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Header from "../../header";
 import Footer from "../../footer";
 import HotelPrpps from "./props";
+import DateInfo from "../../home/datedata";
+import UserNumber from "../info";
 
 const data = [
   {
@@ -64,6 +66,9 @@ export default function Availability() {
             <option value="relevance">Sort: By relevance</option>
             <option value="name-asc">Hotel name A-Z</option>
           </select>
+          <div>
+            <UserNumber/>
+          </div>
           <div className="grid md:grid-cols-3 gap-2  grid-cols-1">
             {hotel.map((hotelui, index) => (
               <HotelPrpps

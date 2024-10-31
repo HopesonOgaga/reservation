@@ -22,9 +22,13 @@
 }
 
 .rbc-event-label {
-  display: none !important;
+  display:block !important;
 }
 
-.rbc-event-container {
+.rbc-events-container {
   width: 100% !important;
+}
+
+.rbc-timeslot-group{
+    min-height: 120px !important;
 }

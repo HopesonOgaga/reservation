@@ -16,6 +16,7 @@ import Reservation from "./components/reservation/checkout";
 import Payment from "./components/reservation/payment";
 import MyCalendar from "./ui/calendar/calendar";
 import { events } from "./ui/calendar/indes";
+import DataInfo from "./components/reservation/info";
 
 
 const router = createBrowserRouter(
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path="reserve" element={<Reservation></Reservation>}></Route>
       <Route path="payment" element ={<Payment></Payment>}></Route>
       <Route path="calendar" element={<MyCalendar events={events} />}></Route>
+      <Route path="data" element={<DataInfo></DataInfo>}></Route>
     </Route>
   )
 );

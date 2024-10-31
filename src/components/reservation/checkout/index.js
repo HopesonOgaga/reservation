@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../header";
 import Footer from "../../footer";
 import { Link } from "react-router-dom";
+import UserNumber from "../info";
 
 export default function Reservation() {
   return (
@@ -29,6 +30,7 @@ export default function Reservation() {
             <option value="ngn">NGN - Nigerian Naira</option>
           </select>
         </div>
+        <UserNumber/>
 
         {/* Hotel Details Section */}
         <div className="flex flex-col gap-6">
