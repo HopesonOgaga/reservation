@@ -11,28 +11,28 @@ const data = [
     name: "Eko Signature",
     location: "Lagos, Nigeria",
     details: "Luxurious hotel with premium services.",
-    price: "450,000",
+    price: "NGN 450,000",
   },
   {
     image: "/image/eko-hotel.jpg",
     name: "Eko Gardens",
     location: "Victoria Island, Nigeria",
     details: "A comfortable stay in a serene environment.",
-    price: "125,000",
+    price: "NGN 125,000",
   },
   {
     image: "/image/eko-hotel.jpg",
     name: "Eko Hotel",
     location: "Victoria Island, Nigeria",
     details: "Modern amenities with excellent hospitality.",
-    price: "255,000",
+    price: "NGN 255,000",
   },
   {
     image: "/image/eko-hotel.jpg",
     name: "Eko Suites",
     location: "Lagos, Nigeria",
     details: "Perfect for business and leisure stays.",
-    price: "280,000",
+    price: "NGN 280,000",
   },
 ];
 

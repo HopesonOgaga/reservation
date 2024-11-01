@@ -7,6 +7,7 @@ export default function HotelPrpps({ image, name, location, price, details }) {
 
   function hotelInfo() {
     const data = {
+      image,
       name,
       location,
       price,
@@ -44,7 +45,7 @@ export default function HotelPrpps({ image, name, location, price, details }) {
       {/* Price */}
       <div>
         <p className="text-lg font-semibold text-blue-400 text-center w-full">
-          <span className="text-lg font-medium text-black"> from </span>₦{price}
+          <span className="text-lg font-medium text-black"> from </span>{price}
         </p>
         <p className="text-center text-sm font-light">Per Night</p>
         <p className="text-center text-sm font-light">Including taxes and fees</p>
