@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../../header";
 import Footer from "../../footer";
 import { Link } from "react-router-dom";
 import UserNumber from "../info";
+import UserContext from "../../../context/userContext";
 
 export default function Reservation() {
+  const { hotelinfo } = useContext(UserContext);
+
   return (
     <section>
       <Header />
       <div className="ml-6 mr-6">
-        {/* Header Section */}
         <div className="mb-4">
           <p className="text-2xl font-bold">Select a room</p>
         </div>
 
-        {/* Filters Section */}
-        <div className="flex md:flex-row flex-col  gap-8 w-full h-full mb-6">
+        <div className="flex md:flex-row flex-col gap-8 w-full h-full mb-6">
           <select className="p-2 border rounded">
             <option value="rooms">View by: Rooms</option>
             <option value="rate">Rate</option>
@@ -30,54 +31,58 @@ export default function Reservation() {
             <option value="ngn">NGN - Nigerian Naira</option>
           </select>
         </div>
-        <UserNumber/>
 
-        {/* Hotel Details Section */}
+        <UserNumber />
+
+        <section className="md:h-[55vh] md:w-[65vw] w-full h-full border border-blue-300 rounded-sm p-4 ">
+          <div className="w-full h-full flex md:flex-row flex-col gap-4">
+            <img
+              className="md:w-1/3 w-full h-[30vh] p-2 border-2 rounded-sm shadow-sm"
+              src="/image/bedroom.jpg"
+              alt="Bedroom"
+            />
+            <div className="flex flex-col gap-4 h-full w-full">
+              <p className="text-2xl font-bold uppercase text-blue-400">
+                Studio Suites
+              </p>
+              <p className="text-lg">1 King bed</p>
+              <p className="text-sm">
+                The studio suite offers a lounge, safe, minibar, desk and
+                kitchenette
+              </p>
+              <p className="underline font-semibold capitalize">
+                Room details
+              </p>
+              <div className="flex justify-between w-full h-full pl-2 pr-2 ">
+                <p className="underline capitalize font-semibold text-blue-200">
+                  Best Availability rate
+                </p>
+                <div className="">
+                  <div>
+                    <p className="text-lg">NGN 380,000</p>
+                    <p className="text-sm">per night</p>
+                    <p className="text-sm">Including taxes and fees</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="flex flex-col gap-6">
           <div>
             <p className="text-xl font-semibold">Room</p>
-            <div className="flex md:gap-4 gap-1 ">
-              <p className="font-semibold text-lg  capitalize">1 Guest</p>
+            <div className="flex md:gap-4 gap-1">
+              <p className="font-semibold text-lg capitalize">1 Guest</p>
               <p className="font-semibold text-lg capitalize">1 Bedroom</p>
-              <p className="font-semibold text-lg  capitalize">1 Bed</p>
+              <p className="font-semibold text-lg capitalize">1 Bed</p>
               <p className="font-semibold text-lg capitalize">1 Bath</p>
             </div>
 
             <div className="flex md:flex-row flex-col md:justify-around items-center gap-6 mt-4">
-              {/* Left Side: Hotel Info */}
-              <div className="">
+              <div>
                 <div className="flex gap-3 items-center">
-                  <div className="h-full">
-                    <img src="/image/circle.png" alt="circle" className="w-6" />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <p className="font-semibold text-lg capitalize">
-                      Jorgan Hotel
-                    </p>
-                    <p className="text-sm">
-                      Jorgan are experienced, highly rated hosts committed to
-                      providing great stays for guests.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-3 items-center">
-                  <div className="h-full">
-                    <img src="/image/circle.png" alt="circle" className="w-6" />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <p className="font-semibold text-lg capitalize">
-                      Jorgan Hotel
-                    </p>
-                    <p className="text-sm">
-                      Jorgan are experienced, highly rated hosts committed to
-                      providing great stays for guests.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-3 items-center">
-                  <div className="h-full">
-                    <img src="/image/circle.png" alt="circle" className="w-6" />
-                  </div>
+                  <img src="/image/circle.png" alt="circle" className="w-6" />
                   <div className="flex flex-col gap-1">
                     <p className="font-semibold text-lg capitalize">
                       Jorgan Hotel
@@ -90,15 +95,15 @@ export default function Reservation() {
                 </div>
               </div>
 
-              {/* Right Side: Price & Booking */}
-              <div className="flex flex-col items-center md:items-end gap-4 ">
+              <div className="flex flex-col items-center md:items-end gap-4">
                 <p className="font-semibold">Best Available Rate</p>
                 <div className="text-right">
-                  <p className="text-xl font-semibold">NGN 160,000</p>
-                  <p className="text-sm ">Including taxes and fees</p>
+                  <p className="text-xl font-semibold">
+                    {hotelinfo?.price || "Price not available"}
+                  </p>
+                  <p className="text-sm">Including taxes and fees</p>
                 </div>
-                <Link to={"/payment"}>
-                  {" "}
+                <Link to="/payment">
                   <button className="w-44 h-14 rounded-md shadow-sm border-2 bg-blue-400 hover:bg-blue-600 active:bg-sky-300 font-semibold text-lg capitalize text-white">
                     Book Now
                   </button>
@@ -108,10 +113,6 @@ export default function Reservation() {
           </div>
         </div>
       </div>
-
-      {/* Checkout Info Section (if any) */}
-      <div>{/* Add checkout info here if needed */}</div>
-
       <Footer />
     </section>
   );

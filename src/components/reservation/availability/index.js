@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Header from "../../header";
 import Footer from "../../footer";
 import HotelPrpps from "./props";
-import DateInfo from "../../home/datedata";
 import UserNumber from "../info";
+
 
 const data = [
   {
@@ -38,7 +38,6 @@ const data = [
 
 export default function Availability() {
   const [hotel, setHotel] = useState(data);
-
   const handleSort = (e) => {
     const value = e.target.value;
     const sortedHotels = [...hotel];
@@ -50,6 +49,8 @@ export default function Availability() {
 
     setHotel(sortedHotels);
   };
+
+  
 
   return (
     <section className="h-full w-full">
